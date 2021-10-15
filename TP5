@@ -1,1 +1,17 @@
+import sys
+nb_parfait(*args):
+n=sys.argv[1]
 
+somme_diviseurs = 0
+list_diviseurs = []
+
+for i in range (1,n):
+    if n%i == 0: #si i est un diviseur de n
+        somme_diviseurs += i #on ajoute i à la somme
+
+list_diviseurs.append(i)
+if n == somme_diviseurs:
+    print('Le nombre',n,'est parfait')
+    print("diviseurs",list_diviseurs)
+else :
+    print('Le nombre',n,"n'est pas parfait")
